@@ -1,0 +1,12 @@
+.footer {
+  background-color: #111;
+  color: white;
+  padding: 2rem;
+}
+.footer-grid {
+  display: flex;
+  justify-content: space-around;
+}
+.footer h4 {
+  color: red;
+}

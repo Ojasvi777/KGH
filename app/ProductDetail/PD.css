@@ -1,0 +1,184 @@
+.product-detail-page {
+  padding: 2rem;
+  background: #0f0f0f;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.breadcrumb {
+  color: #aaa;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.product-main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.product-gallery {
+  flex: 1;
+  min-width: 300px;
+}
+
+.main-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.thumbnail-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.thumbnail-row img {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #444;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.product-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.tags {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.tag {
+  font-size: 0.75rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
+  color: white;
+}
+
+.tag.green {
+  background: #228B22;
+}
+
+.tag.red {
+  background: #ff3333;
+}
+
+.product-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.rating span {
+  color: #aaa;
+}
+
+.price {
+  font-size: 1.5rem;
+  color: #ff4444;
+  margin: 0.8rem 0;
+}
+
+.spec-box {
+  background: #1a1a1a;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.spec-box ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.spec-box li {
+  margin-bottom: 0.3rem;
+}
+
+.description {
+  margin: 1rem 0;
+  color: #ccc;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+button.red {
+  background: #ff3333;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.outline {
+  background: transparent;
+  border: 1px solid #555;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.warning-box {
+  background: #4c3300;
+  color: #ffcc66;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+}
+
+.related-products {
+  margin-top: 4rem;
+}
+
+.related-products h2 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.product-card {
+  background: #1a1a1a;
+  padding: 1rem;
+  width: 200px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.product-card h4 {
+  color: white;
+  margin-bottom: 0.3rem;
+}
+
+.product-card p {
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.product-card .price {
+  color: #ff4444;
+  font-weight: bold;
+  margin-top: 0.3rem;
+}

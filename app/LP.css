@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f0f0f;
+  color: #fff;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: #111;
+  border-bottom: 1px solid #333;
+}
+
+.header .logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.header nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: #ccc;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, #000, #111);
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+.hero-text .highlight {
+  color: red;
+
+}
+
+.hero-text p {
+  margin: 1rem 0;
+  color: #aaa;
+}
+
+.buttons button {
+  margin-right: 1rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button.red {
+  background: #ff3333;
+  color: white;
+}
+
+button.white {
+  background: #fff;
+  color: black;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  background: #1a1a1a;
+}
+
+.filters select {
+  margin: 0 0.5rem;
+  padding: 0.5rem;
+}
+
+.categories, .products, .testimonials {
+  padding: 2rem;
+  text-align: center;
+}
+
+.category-cards, .product-grid, .testimonial-grid {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.card, .product-card, .testimonial {
+  background: #222;
+  padding: 1rem;
+  margin: 0.5rem;
+  flex: 1 1 200px;
+  border-radius: 8px;
+}
+
+.footer {
+  background: #111;
+  padding: 2rem;
+  text-align: center;
+}
+
+.footer-grid {
+  display: flex;
+  justify-content: space-around;
+  text-align: left;
+  flex-wrap: wrap;
+}
+
+.footer h4 {
+  margin-bottom: 0.5rem;
+  color: #ff4444;
+}
