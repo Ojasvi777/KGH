@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../../Authentication"
+		},
+		{
+			"path": "../../FastApi project"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {}
+}
