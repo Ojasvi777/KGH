@@ -1,9 +1,9 @@
 
 import './LP.css';
-import Navbar from './components1/Navbar';
-import Footer from './components1/Footer';
+import Navbar from '@/app/components1/Navbar';
+import Footer from '@/app/components1/Footer';
 import Link from 'next/link';
-import SignUpForm from '../components/SignUpForm'
+import SignUpForm from '@/components/SignUpForm'
 export default function Home() {
   return (
     <div className="landing">
