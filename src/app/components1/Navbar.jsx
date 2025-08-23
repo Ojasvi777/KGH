@@ -6,7 +6,7 @@ export default function Navbar() {
   return (
     <header className="navbar">
       {/* Logo */}
-      <div className="logo">KATHURIA GUN HOUSE</div>
+     <Link href="/"> <div className="logo">KATHURIA GUN HOUSE</div></Link>
 
       {/* Links */}
       <nav className="nav-links">

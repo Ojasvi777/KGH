@@ -1,7 +1,13 @@
 import './PD.css';
+import '../components1/Navbar'
+import '../components1/Footer'
+import Navbar from '../components1/Navbar';
+import Footer from '../components1/Footer';
 
 export default function ProductDetail() {
   return (
+    <div>
+    <Navbar/>
     <div className="product-detail-page">
       <div className="breadcrumb">
         <a href="#">Home</a> &gt; <a href="#">Firearms</a> &gt; Glock 19 Gen 5
@@ -91,5 +97,7 @@ export default function ProductDetail() {
         </div>
       </div>
     </div>
+    <Footer/>
+</div>
   );
 }

@@ -3,12 +3,10 @@ import './LP.css';
 import Navbar from '@/app/components1/Navbar';
 import Footer from '@/app/components1/Footer';
 import Link from 'next/link';
-import SignUpForm from '@/components/SignUpForm'
 export default function Home() {
   return (
     <div className="landing">
       <Navbar />
-<SignUpForm/>
       <section className="hero">
         <div className="hero-text">
           <h1><span>PRECISION.</span><br/><span className="highlight">POWER.</span><br/>LEGACY.</h1>
