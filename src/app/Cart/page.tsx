@@ -1,10 +1,21 @@
 import './cart.css';
 import Navbar from '../components1/Navbar';
-import Footer from '../components1/Footer'; 
+import Footer from '../components1/Footer';
 import { FaTrash } from 'react-icons/fa';
 
+interface CartItem {
+  id: number;
+  name: string;
+  category: string;
+  brand: string;
+  price: number;
+  oldPrice?: number;
+  quantity: number;
+  image: string;
+}
+
 export default function Cart() {
-  const cartItems = [
+  const cartItems: CartItem[] = [
     {
       id: 1,
       name: 'Premium Wireless Headphones',
@@ -53,9 +64,11 @@ export default function Cart() {
             {cartItems.map((item) => (
               <div key={item.id} className="cart-item">
                 <img src={item.image} alt={item.name} className="cart-item-img" />
+
                 <div className="cart-item-details">
                   <h3>{item.name}</h3>
                   <p>{item.category} • {item.brand}</p>
+
                   <div className="cart-item-actions">
                     <div className="quantity-controls">
                       <button>-</button>
@@ -64,10 +77,13 @@ export default function Cart() {
                     </div>
                     <div className="cart-item-price">
                       <span className="price">${item.price.toFixed(2)}</span>
-                      {item.oldPrice && <span className="old-price">${item.oldPrice}</span>}
+                      {item.oldPrice && (
+                        <span className="old-price">${item.oldPrice.toFixed(2)}</span>
+                      )}
                     </div>
                   </div>
                 </div>
+
                 <FaTrash className="delete-icon" />
               </div>
             ))}
@@ -98,7 +114,8 @@ export default function Cart() {
           </div>
         </div>
       </div>
-      <Footer/>
+
+      <Footer />
     </>
   );
 }
