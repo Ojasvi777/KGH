@@ -60,6 +60,7 @@ model User {
   image         String?
   contact       String?
   role          Role      @default(NORMAL_USER)
+  phoneNumber   String?
 
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
@@ -71,6 +72,7 @@ model User {
   viewedProducts Product[] @relation("ViewedBy")
   cartItems      Cart[]
   wishlistItems  Wishlist[]
+  reviews        Review[]
 }
 
 model VerificationToken {
@@ -93,6 +95,9 @@ model Product {
   quantity        Int
   licenseRequired Boolean      @default(false)
   tag             ProductTag?
+  averageRating   Float?       @default(0) // Average rating out of 5
+  totalRating     Int          @default(0) // Sum of all ratings
+  totalReviews    Int          @default(0) // Count of all reviews
 
   // Audit fields
   addedAt         DateTime?    @default(now())
@@ -101,10 +106,18 @@ model Product {
   // Relations
   categoryId      String
   category        Category     @relation(fields: [categoryId], references: [id])
+  brandId         String
+  brand           Brand        @relation(fields: [brandId], references: [id])
+  typeId          String
+  type            Type         @relation(fields: [typeId], references: [id])
+  caliberId       String
+  caliber         Caliber      @relation(fields: [caliberId], references: [id])
+  photos          Photo[]
 
   viewedBy        User[]       @relation("ViewedBy")
   cartItems       Cart[]
   wishlistItems   Wishlist[]
+  reviews         Review[]
 
   createdAt       DateTime     @default(now())
   updatedAt       DateTime     @updatedAt
@@ -140,4 +153,72 @@ model Category {
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+}
+
+// -------------------------
+// NEW ADDITIONAL MODELS
+// -------------------------
+
+model Brand {
+  id        String    @id @default(cuid())
+  name      String    @unique
+  logo      String?   // URL to brand logo
+  website   String?   // Brand website URL
+  products  Product[]
+  
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+model Photo {
+  id        String   @id @default(cuid())
+  url       String   // URL to the photo
+  alt       String?  // Alt text for accessibility
+  isPrimary Boolean  @default(false) // Whether this is the primary product image
+  
+  // Relations
+  productId String
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Type {
+  id          String    @id @default(cuid())
+  name        String    @unique
+  description String?
+  products    Product[]
+  
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model Caliber {
+  id          String    @id @default(cuid())
+  name        String    @unique
+  description String?
+  products    Product[]
+  
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model Review {
+  id          String   @id @default(cuid())
+  rating      Int      // 1-5 star rating
+  comment     String?  // Optional review comment
+  isVerified  Boolean  @default(false) // Whether the review is from a verified purchase
+  
+  // Relations
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  productId   String
+  product     Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  @@unique([userId, productId]) // One review per user per product
+  @@map("reviews") // Explicit table name
 }
