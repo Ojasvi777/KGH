@@ -34,3 +34,50 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+KGH Website
+
+A responsive website for KGH, built with Next.js, Tailwind CSS, and TypeScript.
+
+🚀 Tech Stack
+
+Next.js
+
+Tailwind CSS
+
+TypeScript
+
+📂 Pages & Functionality
+
+Homepage
+
+<img width="1910" height="883" alt="Screenshot 2025-09-04 194328" src="https://github.com/user-attachments/assets/3ea5d76d-a89f-4b8b-9e2d-d28fa513424f" />
+
+Hero banner with branding
+
+Quick navigation to major sections
+
+About Page
+
+Organization overview and history
+
+Departments Page
+
+List of departments with descriptions and key services
+
+Doctors Page
+
+Profiles of doctors with specialization and availability
+
+Contact Page
+
+Contact form and location map
+
+🎯 Features
+
+Fully responsive and mobile-friendly
+
+Accessible design with clear navigation
+
+Modular components for scalability
